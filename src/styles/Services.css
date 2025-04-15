@@ -1,0 +1,298 @@
+/* === Theme Variables === */
+:root {
+    --background: #f4f4f4;
+    --text: #333;
+    --card-bg: #fff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --accent: #ff6347;
+    --accent-dark: #e5533e;
+    --cta-bg: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    --cta-text: #fff;
+}
+
+[data-theme="dark"] {
+    --background: #121212;
+    --text: #eee;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(255, 255, 255, 0.1);
+    --accent: #ff8a65;
+    --accent-dark: #e57373;
+    --cta-bg: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    --cta-text: #f9f9f9;
+}
+
+/* === General Page Styles === */
+.services-page {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 20px;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.services-header p {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* === Service List Styling === */
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px var(--card-shadow);
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    min-height: 580px;
+}
+
+/* .service-card:hover {
+    transform: scale(1.05);
+} */
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    max-height: 250px;
+    min-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-card h2 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    min-height: 3.5rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.service-card p strong {
+    color: var(--accent);
+}
+
+/* === Call to Action Section === */
+.cta-section {
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    padding: 40px 20px;
+    margin: 60px auto 0;
+    border-radius: 12px;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+.cta-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* === Comparison Chart === */
+.comparison-chart {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.comparison-chart h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.comparison-chart table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comparison-chart th,
+.comparison-chart td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.comparison-chart th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.comparison-chart tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.comparison-chart tr:hover {
+    background-color: #f1f1f1;
+}
+
+.comparison-chart td {
+    font-size: 1rem;
+}
+
+/* === FAQ Section === */
+.faq-section {
+    margin-top: 60px;
+    background-color: #f9fafa;
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--accent);
+}
+
+.faq-item p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 1024px) {
+    .service-card {
+        width: 45%;
+    }
+
+    .cta-button {
+        font-size: 16px;
+    }
+
+    .comparison-chart table {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .services-header h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 16px;
+    }
+
+    .comparison-chart table {
+        width: 100%;
+    }
+
+    .service-card img {
+        height: 180px;
+        min-height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .service-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+.learn-more-button {
+    display: inline-block;
+    margin-top: auto;
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.3);
+}
+
+.learn-more-button:hover {
+    background-color: #e5533e;
+    transform: translateY(-2px);
+}
+
+.more-info-list {
+    text-align: left;
+    /* Right-align the text */
+    margin-top: 10px;
+    padding-right: 20px;
+    /* Optional: Add padding to the right to ensure it's not flush with the edge */
+}

@@ -1,0 +1,107 @@
+.home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.hero {
+    background: url('../assets/service-images/hero2.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #ff6347;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.feature-card {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: #ff6347;
+    margin-bottom: 0.5rem;
+}
+
+.explore-services {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--card-bg);
+    color: var(--text);
+}
+
+.explore-services h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.explore-services p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
